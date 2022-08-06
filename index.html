@@ -9,28 +9,28 @@
 </head>
 <body>
     <div class="calculator">
-        <input class="calc-input" type="number" placeholder="0">
+        <div class="calc-input"></div>
         <div class="calculator-buttons">
             
-            <button class="calc-button">7</button>
-            <button class="calc-button">8</button>
-            <button class="calc-button">9</button>
-            <button class="calc-button">&plus;</button>
+            <button class="calc-button" onclick="onNumberInput('7')">7</button>
+            <button class="calc-button" onclick="onNumberInput('8')">8</button>
+            <button class="calc-button" onclick="onNumberInput('9')">9</button>
+            <button class="calc-button" onclick="operatorInput('+')">&plus;</button>
             
-            <button class="calc-button">4</button>
-            <button class="calc-button">5</button>
-            <button class="calc-button">6</button>
-            <button class="calc-button">&minus;</button>
+            <button class="calc-button" onclick="onNumberInput('4')">4</button>
+            <button class="calc-button" onclick="onNumberInput('5')">5</button>
+            <button class="calc-button" onclick="onNumberInput('6')">6</button>
+            <button class="calc-button" onclick="operatorInput('-')">&minus;</button>
             
-            <button class="calc-button">1</button>
-            <button class="calc-button">2</button>
-            <button class="calc-button">3</button>
-            <button class="calc-button">&times;</button>
+            <button class="calc-button" onclick="onNumberInput('1')">1</button>
+            <button class="calc-button" onclick="onNumberInput('2')">2</button>
+            <button class="calc-button" onclick="onNumberInput('3')">3</button>
+            <button class="calc-button" onclick="operatorInput('x')">&times;</button>
             
             <button class="calc-button is-clear">C</button>
-            <button class="calc-button is-zero">0</button>
-            <button class="calc-button is-equals">&equals;</button>
-            <button class="calc-button">&divide;</button>
+            <button class="calc-button is-zero" oncli ck="onNumberInput('0')">0</button>
+            <button class="calc-button is-equals" onclick="onEquals()">&equals;</button>
+            <button class="calc-button" onclick="operatorInput('/')">&divide;</button>
     
         </div>
     </div>
