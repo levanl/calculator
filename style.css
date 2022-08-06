@@ -6,6 +6,7 @@ body {
     background: #1e2326;
     padding-bottom: 30px;
     padding-top: 100px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .calculator {
@@ -58,4 +59,12 @@ body {
 
 .is-equals {
     background-color: #fec208;
+}
+
+.calc-input{
+    color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 48px;
 }

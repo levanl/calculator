@@ -1,77 +1,72 @@
+
 let firstNumString = '';
 let secondNumString = '';
 let operator;
+let resultElement = document.getElementById('result');
 
 const onNumberInput = (num) => {
-    if(operator) {
-        firstNumString += num;
-    } else {
+    if (operator) {
         secondNumString += num;
+        drawResult(secondNumString)
+    } else {
+        firstNumString += num;
+        drawResult(firstNumString)
     }
-    console.log(firstNumString, operator, secondNumString)
 }
 
 const operatorInput = (op) => {
-    operator = op;
-    if(operator){
+    if (operator) {
         onEquals();
-
     }
-    
-    // if operator null
-        //store in operator
-    //else
-        //call onEquals()
-        //store result in firstNumber
-        //store new op
+    operator = op;
+}
+
+const drawResult = (res) => {
+    resultElement.innerText = res;
 }
 
 const onEquals = () => {
-    if(firstNumString && operator && secondNumString){
+    if (firstNumString && operator && secondNumString) {
         let firstNum = +firstNumString;
         let secondNum = +secondNumString;
         console.log(firstNum, operator, secondNum);
         let result;
-        switch(operator) {
+        switch (operator) {
             case 'x':
-                result = multiply(firstNum,secondNum);
+                result = multiply(firstNum, secondNum);
                 break;
-            case '/': 
-                result = divide(firstNum,secondNum);
+            case '/':
+                result = divide(firstNum, secondNum);
                 break;
-            case '+': 
-                result = add(firstNum,secondNum);
+            case '+':
+                result = add(firstNum, secondNum);
                 break;
             case '-':
-                result = minus(firstNum,secondNum);
+                result = minus(firstNum, secondNum);
                 break;
         }
-        console.log(result);
-    }else {
-            
+        firstNumString = result + '';
+        secondNumString = '';
+        operator = null;
+        drawResult(firstNumString)
+    } else {
+
     }
 
 }
 
-function reset(a,b) {
-    a = "";
-    b = "";
-}
-
-
-
-function add(a,b) {
+function add(a, b) {
     return a + b;
 }
 
-function divide(a,b) {
+function divide(a, b) {
     return a / b;
 }
 
-function minus(a,b) {
+function minus(a, b) {
     return a - b;
 }
 
-function multiply(a,b) {
+function multiply(a, b) {
     return a * b;
 }

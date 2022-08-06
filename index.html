@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto+Mono:wght@300&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="calculator">
-        <div class="calc-input"></div>
+        <div class="calc-input" id="result"></div>
         <div class="calculator-buttons">
-            
+
             <button class="calc-button" onclick="onNumberInput('7')">7</button>
             <button class="calc-button" onclick="onNumberInput('8')">8</button>
             <button class="calc-button" onclick="onNumberInput('9')">9</button>
             <button class="calc-button" onclick="operatorInput('+')">&plus;</button>
-            
+
             <button class="calc-button" onclick="onNumberInput('4')">4</button>
             <button class="calc-button" onclick="onNumberInput('5')">5</button>
             <button class="calc-button" onclick="onNumberInput('6')">6</button>
             <button class="calc-button" onclick="operatorInput('-')">&minus;</button>
-            
+
             <button class="calc-button" onclick="onNumberInput('1')">1</button>
             <button class="calc-button" onclick="onNumberInput('2')">2</button>
             <button class="calc-button" onclick="onNumberInput('3')">3</button>
             <button class="calc-button" onclick="operatorInput('x')">&times;</button>
-            
+
             <button class="calc-button is-clear">C</button>
             <button class="calc-button is-zero" oncli ck="onNumberInput('0')">0</button>
             <button class="calc-button is-equals" onclick="onEquals()">&equals;</button>
             <button class="calc-button" onclick="operatorInput('/')">&divide;</button>
-    
+
         </div>
     </div>
 </body>
 <script src="myscripts.js"></script>
+
 </html>
