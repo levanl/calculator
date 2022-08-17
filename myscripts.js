@@ -15,6 +15,7 @@ const onNumberInput = (num) => {
 }
 
 const operatorInput = (op) => {
+    drawResult(op);
     if (operator) {
         onEquals();
     }
@@ -69,4 +70,10 @@ function minus(a, b) {
 
 function multiply(a, b) {
     return a * b;
+}
+
+function clearBoard() {
+    drawResult("0");
+    firstNumString = '';
+    secondNumString = '';
 }
